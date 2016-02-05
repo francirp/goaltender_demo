@@ -1,0 +1,14 @@
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: goaltender_demo_dev
+  pool: 5
+  host: localhost
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: goaltender_demo_test
+  pool: 5
+  host: localhost
