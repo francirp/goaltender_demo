@@ -9,7 +9,7 @@ class NestedExample::TripsController < ApplicationController
 
   def create
     @trip = Trip.new(transformed_trip_params)
-    binding.pry
+
     if @trip.save
       redirect_to basic_example_trip_path(@trip)
     else
