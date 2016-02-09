@@ -1,8 +1,8 @@
 FactoryGirl.define do
   factory :destination do
-    city "MyString"
-    state "MyString"
-    arrival_date "2016-02-04"
-    departure_date "2016-02-04"
+    city Faker::Address.city
+    state Faker::Address.state
+    arrival_date "02/14/2016"
+    departure_date "02/15/2016"
   end
 end

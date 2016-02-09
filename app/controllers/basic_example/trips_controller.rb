@@ -1,4 +1,4 @@
-class TripsController < ApplicationController
+class BasicExample::TripsController < ApplicationController
   def new
     @trip = Trip.new
   end
@@ -11,7 +11,7 @@ class TripsController < ApplicationController
     @trip = Trip.new(transformed_trip_params)
 
     if @trip.save
-      redirect_to trips_path
+      redirect_to basic_example_trip_path(@trip)
     else
       render 'new'
     end

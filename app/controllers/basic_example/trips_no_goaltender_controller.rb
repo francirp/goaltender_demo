@@ -1,4 +1,4 @@
-class TripsWithoutGoaltenderController < ApplicationController
+class BasicExample::TripsNoGoaltenderController < ApplicationController
   def new
     @trip = Trip.new
     render 'trips/new'
@@ -17,7 +17,7 @@ class TripsWithoutGoaltenderController < ApplicationController
     @trip.end_date = end_date
 
     if @trip.save
-      redirect_to trips_path
+      redirect_to basic_example_trips_no_goaltender_path(@trip)
     else
       render 'trips/new'
     end
