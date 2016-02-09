@@ -1,12 +1,4 @@
 class NestedExample::TripsController < ApplicationController
-  def new
-    @trip = Trip.new
-  end
-
-  def index
-    @trip = Trip.all
-  end
-
   def create
     @trip = Trip.new(transformed_trip_params)
 

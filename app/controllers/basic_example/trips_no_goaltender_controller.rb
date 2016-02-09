@@ -1,14 +1,4 @@
 class BasicExample::TripsNoGoaltenderController < ApplicationController
-  def new
-    @trip = Trip.new
-    render 'trips/new'
-  end
-
-  def index
-    @trip = Trip.all
-    render 'trips/index'
-  end
-
   def create
     @trip = Trip.new(trip_params)
     start_date = Date.strptime(trip_params[:start_date], '%m/%d/%Y')

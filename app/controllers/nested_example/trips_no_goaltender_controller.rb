@@ -1,12 +1,4 @@
 class NestedExample::TripsNoGoaltenderController < ApplicationController
-  def new
-    @trip = Trip.new
-  end
-
-  def index
-    @trip = Trip.all
-  end
-
   def create
     modified_params = trip_params.dup
     modified_params = parse_start_date(modified_params)
